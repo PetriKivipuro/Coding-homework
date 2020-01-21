@@ -9,7 +9,11 @@ namespace exercise_12
       // Write your code here:
       Console.WriteLine("Give a number!");
       string number = Console.ReadLine();
-      Console.WriteLine("You gave " + number);
+      
+      int intValue = Convert.ToInt32(number);
+
+      Console.WriteLine("You gave " + intValue);
+      
 
   
     }
