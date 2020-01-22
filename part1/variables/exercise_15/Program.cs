@@ -16,12 +16,12 @@ namespace exercise_15
       int intValue = Convert.ToInt32(number);
       
 
-      Console.Write("Give a double:");
+      Console.WriteLine("Give a double:");
       string tupla = Console.ReadLine();
       double arvoinen = Convert.ToDouble(tupla);
       
       
-      Console.WriteLine("Give a boolean: ");
+      Console.WriteLine("Give a boolean:");
       string truth = Console.ReadLine();
       bool boolinarvo = System.Convert.ToBoolean(truth);
       
