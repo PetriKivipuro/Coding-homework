@@ -10,6 +10,10 @@ namespace exercise_11
             double hoursToLunch = 1;
             string statement = "Are you sure?";
 
+            dayCount = 200;
+            hoursToLunch = 3.5;
+            statement = "It sure is!";
+            
             // DO NOT TOUCH THESE!
             Console.WriteLine("Days to summer:");
             Console.WriteLine(dayCount);
@@ -17,6 +21,15 @@ namespace exercise_11
             Console.WriteLine(hoursToLunch);
             Console.WriteLine("Coding is fun:");
             Console.WriteLine(statement);
+            
+            
+
+
+            
+            
+            
+
+           
 
         }
     }
