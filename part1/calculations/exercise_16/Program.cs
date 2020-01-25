@@ -8,6 +8,11 @@ namespace exercise_16
     {
 
       // Write your code here:
+      Console.WriteLine("How many days?");
+      int days = Convert.ToInt32(Console.ReadLine());
+      Console.WriteLine(days * 86400);
+
+  
 
     }
   }

@@ -8,6 +8,10 @@ namespace exercise_06
         {
             Console.WriteLine("Give input!");
             // Write your code here:
+            string input = Console.ReadLine();
+
+            Console.WriteLine(input);
+
             
         }
     }
