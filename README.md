@@ -504,7 +504,7 @@ The larger number is 4!
 Give the first number!
 > 3
 Give the second number!
-> 2
+> 3
 They are equal!
 ```
 
@@ -1017,7 +1017,7 @@ In these exercises we practice making and calling our own methods.
 
 #### Exercise_49
 
-* Create a method called **PrintPhrase** which prints the phrase "In a hole in the ground there lived a method" and a newline.
+* Create a method called **PrintPhrase** which prints the phrase "In a hole in the ground there lived a method" and a newline (use WriteLine and not just Write).
 
 ```cs
 public static void Main(string[] args)
@@ -1170,7 +1170,7 @@ public static void Main(String[] args)
 
 #### Exercise_56
 
-* Write a method **public static String Word()**. The method must return a string of your choice.
+* Write a method **public static string Word()**. The method must return a string of your choice.
 
 #### Exercise_57
 
@@ -1224,10 +1224,10 @@ Smallest: 2
 
 #### Exercise_59
 
-* Define a three-parameter method **Greatest** that returns the smaller of the two numbers passed to it as parameters.
+* Define a three-parameter method **Greatest** that returns the greatest of the three numbers passed to it as parameters.
 
 ```cs
-public static int Greatest(int number1, int number2) 
+public static int Greatest(int number1, int number2, int number3) 
 {
   // write your code here
   // do not print anything inside the method
@@ -1365,3 +1365,57 @@ The call **christmasTree(10)** should print:
 NOTICE! Heights shorter that 3 don't have work correctly!
 
 
+# Part 3
+
+## Lists
+
+#### Exercise_62
+
+The exercise contains a base that asks the user for strings and adds them to a list. The program stops reading when the user enters an empty string. The program then prints the first element of the list.
+
+Your assignment is to modify the program so that instead of the first value, the third value on the list is printed. Remember that programmers start counting from zero! The program is allowed to malfunction if there are fewer than three entries on the list, so you don't need to prepare for such an event at all.
+
+```console
+> Tom 
+> Emma 
+> Alex 
+> Mary
+>
+Alex
+```
+
+```console
+> Emma 
+> Alex 
+> Mary
+>
+
+Mary
+```
+
+#### Exercise_63
+
+In the exercise template there is a program that reads integers from the user and adds them to a list. This ends when the user enters 0. The program then prints the first value on the list.
+
+Modify the program so that instead of the first value, the program prints the sum of the second and third numbers. The program is allowed to malfunction if there are fewer than three entries on the list, so you don't need to prepare for such an event at all.
+
+```console
+> 1 
+> 3 
+> 5 
+> 7 
+> 0 
+8
+```
+
+```console
+> 2 
+> 3 
+> 4 
+> 0 
+7
+```
+
+#### Exercise_64
+
+There is a program that uses a list in the exercise template. Modify it so that its execution always produces the error ArgumentOutRangeException. The user should not have to give any inputs to the program (e.g. write something on the keyboard)
