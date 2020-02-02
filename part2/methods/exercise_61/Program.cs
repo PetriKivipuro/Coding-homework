@@ -2,31 +2,52 @@
 
 namespace exercise_61
 {
-  class Program
-  {
-    public static void Main(String[] args)
+    class Program
     {
+        public static void Main(String[] args)
+        {
+            //PrintStars(3);
+            //PrintSpaces(4);
+            //PrintRightTriangle(15);
+            ChristmasTree(15);
+        }
 
+        public static void PrintStars(int number)
+        {
+            for (int i = 0; i < number; i++)
+            {
+                Console.Write("*");
+            }
+            Console.WriteLine("");
+
+        }
+
+        public static void PrintSpaces(int number)
+        {
+            for (int i = 0; i < number; i++)
+            {
+                Console.Write(" ");
+            }
+
+
+        }
+
+        public static void PrintRightTriangle(int size)
+        {
+            int left = size - 1;
+            for (int i = 1; i <= size; i++) //korkeus
+            {
+
+                PrintSpaces(left);
+                PrintStars(i);
+                left--;
+            }
+        }
+
+        public static void ChristmasTree(int height)
+        {
+
+        }
     }
-
-    public static void PrintStars(int number)
-    {
-
-    }
-
-    public static void PrintSpaces(int number)
-    {
-
-    }
-
-    public static void PrintRightTriangle(int size)
-    {
-
-    }
-
-    public static void ChristmasTree(int height)
-    {
-
-    }
-  }
 }
+
