@@ -9,7 +9,7 @@ namespace exercise_61
             //PrintStars(3);
             //PrintSpaces(4);
             //PrintRightTriangle(15);
-            ChristmasTree(15);
+            ChristmasTree(4);
         }
 
         public static void PrintStars(int number)
@@ -46,6 +46,19 @@ namespace exercise_61
 
         public static void ChristmasTree(int height)
         {
+            for (int i = 1; i < height + 1; i++)
+            {
+                PrintSpaces(height - i);
+                PrintStars(2 * i - 1);
+            }
+            for (int i = 0; i < 2; i++)
+            {
+                PrintSpaces(height - 2);
+                PrintStars(3);
+            }
+
+
+
 
         }
     }
