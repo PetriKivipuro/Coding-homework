@@ -18,12 +18,13 @@ namespace exercise_64
             lines.Add("you and I have even heard of the quantum theory and atomic structures. Bohr came");
             lines.Add("up with his quantum theory while studying...");
 
-            Console.WriteLine(lines[7]);
+            Console.WriteLine(lines[6]); //**
 
             foreach (string line in lines)
             {
                 Console.WriteLine(line);
             }
+            //Console.WriteLine(lines[6]); //-- Molemmat käy(tässä ja ylempänä**)
 
 
         }
