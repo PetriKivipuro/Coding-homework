@@ -24,12 +24,23 @@ namespace exercise_76
         {
             int sum = 0;
 
-            for (int i = 0; i < givenNumber.Count; i++)
+            for (int i = 0; i < givenNumber.Count; i++)  // .Count!!!!
             {
                 sum = sum + givenNumber[i]; // sum+=numbers[i];
             }
             return sum;
         }
+        /*
+        public static int Sum(List<int> givenNumber) TÄMÄ TEHTY VAIN HARJOITUKSEN JA KERTAUKSEN VUOKSI!!!
+        {
+            int sum = 0;
+            for (int i = 0; i < givenNumber.Count; i++)
+            {
+                sum += givenNumber[i];
+            }
+            return sum;
+        }
+        */
 
     }
 }
