@@ -41,6 +41,25 @@ namespace exercise_78
                       int temp = array[first]
                       array[first] = array[second]
                       array[second] = temp
+
+
+
+
+                     // Print the ones we want to swap
+                        Console.WriteLine("array first: "+ array[first]);
+                        Console.WriteLine("array second: " + array[second]);
+                     // Create int temp, put array[first] value in it
+                        int temp = array[first];
+                     // Print-debugging, remove when done
+                        Console.WriteLine("value of temp is " + temp);
+                     // Put array[second] value INTO array[first]
+                        array[first] = array[second];
+                     // Print array[first] to see the new value is there
+                        Console.WriteLine("value of array[first] is now " + array[first]);
+                     // Put temp, or the original array[first], into array[second]
+                        array[second] = temp;
+                     // Print the new value of array[second] to see the swap worked
+                        Console.WriteLine("value of array[second] is now " + array[second]);
                 */
 
 

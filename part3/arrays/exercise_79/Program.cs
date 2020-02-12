@@ -23,10 +23,23 @@ namespace exercise_79
 
             // Implement the search functionality here
 
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (array[i] == searching)
+                {
+                    Console.WriteLine(searching + " is at index " + i + ".");
+
+
+                }
+                else
+                {
+                    Console.WriteLine(searching + " was not found.");
+
+                }
+
+            }
 
         }
-
     }
 }
-
 
