@@ -35,6 +35,13 @@ namespace exercise_78
             temp = array[first];
             array[first] = array[second];
             array[second] = temp;
+            /*
+                It works, because you create the variable temp, and on the same line you give it a value. On the next line you give it a new value.
+                You could streamline that even more, to have it
+                      int temp = array[first]
+                      array[first] = array[second]
+                      array[second] = temp
+                */
 
 
             // DO NOT CHANGE THE FOLLOWING CODE!
