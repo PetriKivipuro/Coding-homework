@@ -3,21 +3,27 @@ using System.Collections.Generic;
 
 namespace exercise_66
 {
-  class Program
-  {
-    public static void Main(string[] args)
+    class Program
     {
-      List<string> list = new List<string>();
-      while (true)
-      {
-        string input = Console.ReadLine();
-        if (input == "")
+        public static void Main(string[] args)
         {
-          break;
-        }
-        list.Add(input);
-      }
+            List<string> list = new List<string>();
+            while (true)
+            {
+                string input = Console.ReadLine();
+                if (input == "")
+                {
+                    break;
+                }
+                list.Add(input);
 
+            }
+            Console.WriteLine(list[list.Count - 1]);
+
+
+
+
+
+        }
     }
-  }
 }

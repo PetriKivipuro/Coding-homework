@@ -4,23 +4,23 @@ using System.Collections.Generic;
 
 namespace exercise_63
 {
-  class Program
-  {
-    public static void Main(string[] args)
+    class Program
     {
-      List<int> list = new List<int>();
-      while (true)
-      {
-        int input = Convert.ToInt32(Console.ReadLine());
-        if (input == 0)
+        public static void Main(string[] args)
         {
-          break;
+            List<int> list = new List<int>();
+            while (true)
+            {
+                int input = Convert.ToInt32(Console.ReadLine());
+                if (input == 0)
+                {
+                    break;
+                }
+
+                list.Add(input);
+            }
+            Console.WriteLine((list[1]) + (list[2]));
         }
 
-        list.Add(input);
-      }
-      Console.WriteLine(list[0]);
     }
-
-  }
 }

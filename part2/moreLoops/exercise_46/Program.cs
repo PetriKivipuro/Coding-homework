@@ -8,6 +8,12 @@ namespace exercise_46
     {
 
       // Write your code here:
+      int sata = Convert.ToInt32(Console.ReadLine());
+      
+      for (int tulos = sata; sata <= 100; sata++)
+      {
+        Console.WriteLine(sata);
+      }
 
     }
   }

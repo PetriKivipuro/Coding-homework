@@ -2,15 +2,29 @@
 
 namespace exercise_54
 {
-  class Program
-  {
-    public static void Main(String[] args)
+    class Program
     {
-      // Call your method here:
+        public static void Main(String[] args)
+        {
+            // Call your method here:
+            DivisibleByThreeInRange(3, 20);
+        }
 
+        // Write your method here:
+        public static void DivisibleByThreeInRange(int beginning, int end)
+        {
+            int currentNumb = beginning;
+
+            while (currentNumb <= end)
+            {
+                if (currentNumb % 3 == 0)
+                {
+                    Console.WriteLine(currentNumb);
+                }
+                currentNumb++;
+
+            }
+
+        }
     }
-
-    // Write your method here:
-
-  }
 }

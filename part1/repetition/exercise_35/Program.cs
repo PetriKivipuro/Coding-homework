@@ -8,6 +8,21 @@ namespace exercise_35
     {
       // Write your code here:
 
+      while (true)
+      {
+        Console.WriteLine("Give a number:");
+        int numb = Convert.ToInt32(Console.ReadLine());
+
+        if (numb == 42)
+        
+        {
+          break;
+        }
+
+      }
+      
+            
+    
     }
   }
 }
