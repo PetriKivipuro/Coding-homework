@@ -8,8 +8,22 @@ namespace exercise_86
     public static void Main(string[] args)
     {
 
+      while (true)
+      {
+        string story = Console.ReadLine();
+        string[] lines = story.Split(" ");
 
+        if (story == "")
+        {
+          break;
+        }
+
+        for (int i = 0; i < lines.Length; i++)
+        {
+          Console.WriteLine(lines[i]);
+        }
+
+      }
     }
   }
 }
-
