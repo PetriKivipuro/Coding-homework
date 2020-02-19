@@ -3,53 +3,38 @@
 
 namespace sandbox
 {
-    class Program
+  class Program
+  {
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            Person ada = new Person("Ada");
-            Person antti = new Person("Antti");
-            Person martin = new Person("Martin");
+      Person pekka = new Person("Pekka");
+      Person antti = new Person("Antti");
+      int i = 0;
+      while (i < 27)
+      {
+        pekka.GrowOlder();
+        i = i + 1;
+      }
+      antti.GrowOlder();
 
-            ada.PrintPerson();
-            antti.PrintPerson();
-            martin.PrintPerson();
+      if (antti.IsOfLeagalAge())
+      {
+        Console.WriteLine(antti.name + "täysikänen");
+      }
+      else
+      {
+        Console.WriteLine(antti.name + " alaikänen");
+      }
 
-            Console.WriteLine();
-
-            ada.GrowOlder();
-            antti.GrowOlder();
-            antti.GrowOlder();
-            antti.GrowOlder();
-            antti.GrowOlder();
-            antti.GrowOlder();
-            martin.GrowOlder();
-
-            ada.PrintPerson();
-            antti.PrintPerson();
-            martin.PrintPerson();
-
-            // selvennykseksi kaksi tyhjää riviä
-            Console.WriteLine();
-            Console.WriteLine("------------------------------------------");
-
-            Teacher teacher = new Teacher();
-            int grading = teacher.Grade();
-
-            Console.WriteLine("The grade is recieved is " + grading);
-
-            // selvennykseksi kaksi tyhjää riviä
-            Console.WriteLine();
-            Console.WriteLine("------------------------------------------");
-
-            Teacher firts = new Teacher();
-            Teacher second = new Teacher();
-            Teacher third = new Teacher();
-
-            double average = (firts.Grade() + second.Grade() + third.Grade()) / 3.0;
-            Console.WriteLine("The grading average " + average);
-
-        }
-
+      if (pekka.IsOfLeagalAge())
+      {
+        Console.WriteLine(pekka.name + "täys");
+      }
+      else
+      {
+        Console.WriteLine(pekka.name + "alle 18");
+      }
     }
+  }
 }
+
