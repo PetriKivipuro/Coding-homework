@@ -1,4 +1,5 @@
 ﻿using System;
+using person;
 
 
 namespace sandbox
@@ -7,33 +8,13 @@ namespace sandbox
   {
     static void Main(string[] args)
     {
-      Person pekka = new Person("Pekka");
-      Person antti = new Person("Antti");
-      int i = 0;
-      while (i < 27)
-      {
-        pekka.GrowOlder();
-        i = i + 1;
-      }
-      antti.GrowOlder();
+      Teacher first = new Teacher();
+      Teacher second = new Teacher();
+      Teacher third = new Teacher();
 
-      if (antti.IsOfLeagalAge())
-      {
-        Console.WriteLine(antti.name + "täysikänen");
-      }
-      else
-      {
-        Console.WriteLine(antti.name + " alaikänen");
-      }
+      double average = (first.Grade() + second.Grade() + third.Grade()) / 3.0;
 
-      if (pekka.IsOfLeagalAge())
-      {
-        Console.WriteLine(pekka.name + "täys");
-      }
-      else
-      {
-        Console.WriteLine(pekka.name + "alle 18");
-      }
+      Console.WriteLine("Grading average " + average);
     }
   }
 }
