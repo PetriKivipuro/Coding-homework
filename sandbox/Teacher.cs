@@ -1,12 +1,12 @@
-using System;
+// using System;
 
-namespace sandbox
-{
-  public class Teacher
-  {
-    public int Grade()
-    {
+// namespace sandbox
+// {
+//   public class Teacher
+//   {
+//     public int Grade()
+//     {
 
-    }
-  }
-}
+//     }
+//   }
+// }
