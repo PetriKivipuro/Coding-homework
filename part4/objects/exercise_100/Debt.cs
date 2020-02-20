@@ -16,11 +16,13 @@ namespace exercise_100
 
         public void PrintBalance()
         {
-            Console.WriteLine(balance);
+            Console.WriteLine(this.balance);
         }
         public void WaitOneYear()
         {
-            Console.WriteLine(this.balance * this.interestRate);
+            double balanceAfetryr = (this.balance * this.interestRate);
+
+            Console.WriteLine(balanceAfetryr);
         }
 
     }

@@ -14,6 +14,8 @@ namespace exercise_100
             int year = 0;
             while (year < 20)
             {
+
+
                 mortgage.WaitOneYear();
                 year = year + 1;
 
