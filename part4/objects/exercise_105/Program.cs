@@ -10,7 +10,9 @@ namespace exercise_105
       statistics.AddNumber(3);
       statistics.AddNumber(5);
       statistics.AddNumber(1);
-      statistics.AddNumber(2);
+      statistics.AddNumber(0);
+      statistics.AddNumber(-2);
+
       Console.WriteLine("Count: " + statistics.count);
       Console.WriteLine("Sum: " + statistics.sum);
     }
