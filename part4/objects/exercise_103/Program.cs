@@ -9,8 +9,10 @@ namespace exercise_103
       Agent bond = new Agent("James", "Bond");
       Console.WriteLine(bond);
 
+
       Agent bourne = new Agent("Jason", "Bourne");
-      Console.WriteLine(bond);
+      Console.WriteLine(bourne);
+
     }
   }
 }
