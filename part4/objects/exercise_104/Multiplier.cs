@@ -1,7 +1,7 @@
 using System;
 namespace exercise_104
 {
-  class Multiplier
+  public class Multiplier
   {
     private int number;
 
@@ -11,7 +11,8 @@ namespace exercise_104
     }
     public int Multiply(int number666)
     {
-      return this.number = this.number * number666;
+
+      return this.number *= number666;
     }
   }
 }
