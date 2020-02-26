@@ -7,14 +7,18 @@ namespace sandbox
   {
     private string name;
     private int age;
-    private double weight;
-    private double height;
-    public Person(string name, int age, double weight, double height)
+    private int weight;
+    private int height;
+    public Person(string name) : this(name, 0)
     {
-      this.age = age;
+
+    }
+    public Person(string name, int age)
+    {
       this.name = name;
-      this.weight = weight;
-      this.height = height;
+      this.age = age;
+      this.weight = 0;
+      this.height = 0;
     }
 
     public double BodyMassIndex()
@@ -22,23 +26,31 @@ namespace sandbox
       return this.weight / (this.height * this.height);
     }
 
-    public double MaximumHeartRate()
+    public bool IsAdult()
     {
-      return 206.3 - (0.711 * this.age);
+      if (this.age < 18)
+      {
+        return false;
+      }
+      return true;
     }
 
     public void GrowOlder()
     {
-      if (this.age < 100)
-      {
-        this.age = this.age + 1;
-      }
+      this.GrowOlder(1);
     }
+
+    public void GrowOlder(int years)
+    {
+      this.age += years;
+    }
+
+
+
 
     public override string ToString()
     {
-      return this.name + ", BMI: " + this.BodyMassIndex()
-            + ", maximum heart rate: " + this.MaximumHeartRate();
+      return this.name + ", age: " + this.age;
     }
   }
 }

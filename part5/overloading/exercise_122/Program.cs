@@ -11,9 +11,12 @@ namespace exercise_122
       Product plaster = new Product("Plaster", "home improvement section");
       Product tyre = new Product("Tyre", 5);
 
+
+
       Console.WriteLine(tapeMeasure);
       Console.WriteLine(plaster);
       Console.WriteLine(tyre);
+
     }
   }
 }
