@@ -13,6 +13,7 @@ namespace exercise_119
 
     public void Advance()
     {
+      // Advance lisää arvoon yhden
       this.value = this.value + 1;
 
       if (this.value >= this.limit)
@@ -23,6 +24,8 @@ namespace exercise_119
 
     public override string ToString()
     {
+      // jos arvo on pienempi kuin 10 
+      // palauttaa nollan johon lisää arvon?????
       if (this.value < 10)
       {
         return "0" + this.value;

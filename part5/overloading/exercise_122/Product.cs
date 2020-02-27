@@ -8,8 +8,24 @@ namespace exercise_122
     private int weight;
 
     // CREATE YOUR CONSTRUCTORS HERE
+    public Product(string name) : this(name, 1)
+    {
+      this.location = "shelf";
+    }
 
+    public Product(string name, string location) : this(name, 1)
+    {
+      this.name = name;
+      this.location = location;
+      // (this. weight = 1;)
+    }
+    public Product(string name, int weight)
+    {
+      this.name = name;
+      this.weight = weight;
+      this.location = "warehouse";
 
+    }
 
 
 
