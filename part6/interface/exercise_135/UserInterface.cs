@@ -5,7 +5,7 @@ namespace exercise_135
   public class UserInterface
   {
     private JokeManager jokes;
-
+    // tässä alla on nyt se konstruktori!!!
     public UserInterface(JokeManager jokes)
     {
       this.jokes = jokes;
