@@ -16,7 +16,7 @@ namespace exercise_110
                 // sen perään käyttäjä antaa inputin
                 Console.Write("Name: ");
                 string input = Console.ReadLine();
-                // jos input on tyhjä -- ohjelma lopettaa
+                // jos input on tyhjä -- ohjelma lopettaaa
                 if (input == "")
                 {
                     break;
