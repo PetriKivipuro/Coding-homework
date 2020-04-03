@@ -8,38 +8,106 @@ namespace sandbox
     {
         static void Main(string[] args)
         {
-            Dictionary<string, string> postalCodes = new Dictionary<string, string>();
-            postalCodes.Add("00710", "Helsinki");
-            postalCodes.Add("68600", "Pietarsaari");
-            postalCodes.Add("33720", "Tampere");
-            postalCodes.Add("33014", "Tampere");
-            postalCodes.Add("99999", null);
 
-            /*      Console.WriteLine("Anna postinumero");
-                 string input = Console.ReadLine();
+            DateTime start3 = DateTime.Now;
+            Book senseAndSensibility = new Book("Sense and Sensibitilty", 1811, "All begins from ");
+            Book prideAndPredujice = new Book("Pride and Prejudice", 1813, "This is a story of a duck");
 
-                 if (postalCodes.ContainsKey(input))
-                 {
-                     Console.WriteLine(postalCodes[input]);
-                 }
-                 else
-                 {
-                     Console.WriteLine("Antamaasi postinumeroa " + input + " ei löydy!");
-                 } */
+            Dictionary<string, Book> directory = new Dictionary<string, Book>();
+            directory.Add(senseAndSensibility.name, senseAndSensibility);
+            directory.Add(prideAndPredujice.name, prideAndPredujice);
 
-            if (!postalCodes.ContainsKey("00710"))
+            DateTime start2 = DateTime.Now;
+
+            if (directory.ContainsKey("Persuation"))
             {
-                postalCodes.Add("00710", "Hesa");
+                Console.WriteLine(directory["Persuasion"]);
             }
-
-            Console.WriteLine(postalCodes["00710"]);
-
-            foreach (KeyValuePair<string, string> kvp in postalCodes)
+            else
             {
-                Console.WriteLine("Key = {0}, Value = {1}",
-                kvp.Key, kvp.Value);
+                Console.WriteLine("Book not found");
             }
+            Console.WriteLine("---------------------------------------");
+
+            if (directory.ContainsKey("Pride and Prejudice"))
+            {
+                Console.WriteLine(directory["Pride and Prejudice"]);
+            }
+            else
+            {
+                Console.WriteLine("Book not found!");
+            }
+            DateTime end2 = DateTime.Now;
+            Console.WriteLine("Aikaa kulunut: " + (end2.Ticks - start2.Ticks) / 10000.0 + " milliseconds");
+
+
+            Console.WriteLine("--------------<<<>>>--------------------");
+
+            List<Book> books = new List<Book>();
+
+            Book senseAndSensibility2 = new Book("Senssit ja järki", 1600, "tämä on tämä ensimmäinen");
+            Book prideAndPredujice2 = new Book("Prinssit ja ennakot", 1854, "Toinen kirja vaikka onkin neljäs");
+
+            books.Add(senseAndSensibility2);
+            books.Add(prideAndPredujice2);
+
+            DateTime start = DateTime.Now;
+
+            foreach (Book book in books)
+            {
+                if (book.name == "Persuation")
+                {
+                    Console.WriteLine(book);
+                    break;
+                }
+                Console.WriteLine();
+
+                foreach (Book book2 in books)
+                {
+                    if (book2.name == "Senssit ja järki")
+                    {
+                        Console.WriteLine(book2);
+                        break;
+                    }
+                }
+            }
+            DateTime end = DateTime.Now;
+            Console.WriteLine("Aikaa kulunut: " + (end.Ticks - start.Ticks) / 10000.0 + " milliseconds");
+
+
+            Console.WriteLine("--------------<<<>>>--------------------");
+            Console.WriteLine("--------------<<<>>>--------------------");
+
+            Book senseAndSensibility3 = new Book("Sense and Sensibility", 1811, "Tämä on nyt kolmas kerta kun käytetään samoja kirjoja");
+            Book prideAndPredujice3 = new Book("Pride and Prejudice", 1813, "Neljäs kerta toden sanoo ja reeni jatkuu");
+
+            DateTime start4 = DateTime.Now;
+
+            Library library = new Library();
+            library.AddBook(senseAndSensibility3);
+            library.AddBook(prideAndPredujice3);
+
+            Console.WriteLine(library.GetBook("pride and prejudice"));
+            Console.WriteLine();
+
+            Console.WriteLine(library.GetBook("PRIDE AND PREJUDICE"));
+            Console.WriteLine();
+
+            Console.WriteLine(library.GetBooksByPart("SENSE"));
+
+            DateTime end4 = DateTime.Now;
+
+            Console.WriteLine("Aikaa kulunut: " + (end4.Ticks - start4.Ticks) / 10000.0 + " millisekuntia");
+
+            DateTime end3 = DateTime.Now;
+            Console.WriteLine("Aikaa kulunut koko hommaan: " + (end3.Ticks - start3.Ticks) / 10000.0 + " milliseconds");
+
+            Console.WriteLine("--------------<<<>>>--------------------");
+            Console.WriteLine("--------------<<<>>>--------------------");
+
+
 
         }
+
     }
 }
