@@ -59,5 +59,6 @@ namespace Exercise
             // DO SOMETHING HERE
             return this.day + this.month + this.year.GetHashCode();
         }
+
     }
 }
