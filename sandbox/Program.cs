@@ -9,17 +9,15 @@ namespace sandbox
     {
         static void Main(string[] args)
         {
-            List<Point> points = new List<Point>();
-            points.Add(new Point(4, 8));
-            points.Add(new ColorPoint(1, 1, "green"));
-            points.Add(new ColorPoint(2, 5, "blue"));
-            points.Add(new Point3D(5, 2, 8));
-            points.Add(new Point(0, 0));
+            UserInterface userInterface = new UserInterface();
+            userInterface.AddOperation(new PlusOperation());
+            userInterface.AddOperation(new PlusOperation());
+            userInterface.AddOperation(new PlusOperation());
+            userInterface.AddOperation(new PlusOperation());
+            userInterface.AddOperation(new PlusOperation());
+            userInterface.AddOperation(new PlusOperation());
 
-            foreach (Point p in points)
-            {
-                Console.WriteLine(p);
-            }
+            userInterface.Start();
         }
     }
 }
