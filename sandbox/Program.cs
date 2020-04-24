@@ -9,15 +9,12 @@ namespace sandbox
     {
         static void Main(string[] args)
         {
-            UserInterface userInterface = new UserInterface();
-            userInterface.AddOperation(new PlusOperation());
-            userInterface.AddOperation(new PlusOperation());
-            userInterface.AddOperation(new PlusOperation());
-            userInterface.AddOperation(new PlusOperation());
-            userInterface.AddOperation(new PlusOperation());
-            userInterface.AddOperation(new PlusOperation());
+            Packer packer = new Packer();
 
-            userInterface.Start();
+            foreach (IStorable item in packer.GiveAListOfThings())
+            {
+                Console.WriteLine(item);
+            }
         }
     }
 }
