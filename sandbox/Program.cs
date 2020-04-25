@@ -8,13 +8,17 @@ namespace sandbox
     class Program
     {
         static void Main(string[] args)
-        {
-            Packer packer = new Packer();
 
-            foreach (IStorable item in packer.GiveAListOfThings())
+
+        {
+            Clock clock = new Clock();
+
+            while (true)
             {
-                Console.WriteLine(item);
+                Console.WriteLine(clock);
+                clock.Advance();
             }
         }
+
     }
 }
