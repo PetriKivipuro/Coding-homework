@@ -25,7 +25,7 @@ namespace Exercise
         new public int TakeFromWarehouse(int amount)
         {
             base.TakeFromWarehouse(amount);
-            this.listChanges.Add(this.initialBalance);
+            this.listChanges.Add(this.balance);
             return amount;
         }
     }
