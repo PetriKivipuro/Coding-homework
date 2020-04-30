@@ -1,36 +1,56 @@
 ﻿namespace sandbox
 {
     using System;
-    using System.Text.RegularExpressions;
+    using System.Collections.Generic;
 
     class Program
     {
         static void Main(string[] args)
         {
-            Card first = new Card(10, Suit.Heart);
+            Random ladyLuck = new Random();
 
-            Console.WriteLine(first);
+            for (int i = 0; i < 10; i++)
+            {
+                int randomNumber = ladyLuck.Next(10);
+                Console.WriteLine(randomNumber);
 
-            if (first.suit == Suit.Spade)
-            {
-                Console.WriteLine("is a spade");
             }
-            else
+            Console.WriteLine();
+
+            Random saamies = new Random();
+            int lampotila = saamies.Next(81) - 30;
+            Console.WriteLine(lampotila);
+
+
+            Random saamies1 = new Random();
+            for (int j = 0; j < 10; j++)
             {
-                Console.WriteLine("is not a spade");
+                int randomNumber2 = saamies1.Next(81) - 30;
+                Console.WriteLine(randomNumber2);
+
+            }
+            Console.WriteLine();
+
+            WeatherMan ennuste = new WeatherMan();
+
+            List<string> paivat = new List<string>();
+            paivat.Add("Maa");
+            paivat.Add("Tii");
+            paivat.Add("Kes");
+            paivat.Add("Tor");
+            paivat.Add("Vappu Per");
+            paivat.Add("Lau");
+            paivat.Add("Sun");
+
+            Console.WriteLine("vuorokausiennuste: ");
+
+            foreach (string paiva in paivat)
+            {
+                string saaEnnuste = ennuste.Forecast();
+                Console.WriteLine(paiva + ": " + saaEnnuste + ".");
             }
 
-            Card sec = new Card(4, Suit.Spade);
 
-            Console.WriteLine(sec);
-            if (sec.suit == Suit.Spade)
-            {
-                Console.WriteLine("is a spade");
-            }
-            else
-            {
-                Console.WriteLine("is not a spade");
-            }
 
 
         }
