@@ -12,7 +12,11 @@ namespace Exercise
             this.name = name;
             this.age = age;
 
-            if
+            if (this.name == null || this.name == "" || this.name.Length > 40 || this.age > 120 || this.age < 0)
+            {
+                throw new ArgumentException("Name or age is wrong");
+            }
+
         }
 
 
