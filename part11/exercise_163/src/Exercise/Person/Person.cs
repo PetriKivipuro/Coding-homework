@@ -1,16 +1,21 @@
 namespace Exercise
 {
-  using System;
-  public class Person
-  {
-
-    public string name { get; }
-    public int age { get; }
-
-    public Person(string name, int age)
+    using System;
+    public class Person
     {
-      this.name = name;
-      this.age = age;
+
+        public string name { get; }
+        public int age { get; }
+
+        public Person(string name, int age)
+        {
+            this.name = name;
+            this.age = age;
+
+            if
+        }
+
+
+
     }
-  }
 }
