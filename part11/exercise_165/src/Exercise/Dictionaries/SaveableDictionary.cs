@@ -1,39 +1,61 @@
 namespace Exercise
 {
-  using System;
-  using System.IO;
-  using System.Collections.Generic;
-  public class SaveableDictionary
-  {
-    public SaveableDictionary()
+    using System;
+    using System.IO;
+    using System.Collections.Generic;
+    public class SaveableDictionary
     {
-    }
+        private Dictionary<string, string> sanakirja;
+        private string tiedosto;
 
-    public SaveableDictionary(string file) : this()
-    {
-    }
 
-    public void Add(string word, string translation)
-    {
-    }
+        public SaveableDictionary()
+        {
+            this.sanakirja = new Dictionary<string, string>();
+        }
 
-    public bool Load()
-    {
-      return false;
-    }
+        public SaveableDictionary(string file) : this()
+        {
+            this.tiedosto = file;
+        }
 
-    public bool Save()
-    {
-      return false;
-    }
+        public void Add(string word, string translation)
+        {
+            if (!this.sanakirja.ContainsKey(word) && !this.sanakirja.ContainsValue(translation))
+            {
+                this.sanakirja.Add(word, translation);
+            }
+        }
 
-    public string Translate(string word)
-    {
-      return null;
-    }
+        public bool Load()
+        {
+            return false;
+        }
 
-    public void Delete(string word)
-    {
+        public bool Save()
+        {
+            return false;
+        }
+
+        public string Translate(string word)
+        {
+            if (sanakirja.ContainsKey(word))
+            {
+                return this.sanakirja[word];
+            }
+
+            foreach (KeyValuePair<string, string> kvp in sanakirja)
+            {
+                if (kvp.Value == word)
+                {
+                    return kvp.Key;
+                }
+            }
+            return null;
+        }
+
+        public void Delete(string word)
+        {
+        }
     }
-  }
 }
