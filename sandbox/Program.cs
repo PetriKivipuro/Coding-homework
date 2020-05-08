@@ -4,25 +4,19 @@ using System.Collections.Generic;
 
 namespace sandbox
 {
+    using OuterNamespace.InnerNamespace;
+    using OuterNamespace;
     class Program
     {
-        public static void Main(string[] args)
+        static void Main(string[] args)
         {
+            // Displays "ExampleMethod in "
+            Example outer = new Example();
+            outer.ExampleMethod();
 
-            string diary = "uusi2.txt";
-            string[] lines = File.ReadAllLines(diary);
-            StreamWriter sw = new StreamWriter(diary);
-            for (int i = 0; i < lines.Length; i++)
-            {
-                string line = lines[i];
-                if (lines[i].Contains("taitaa alkaa"))
-                {
-                    line = "Kyllä vain se tästä alkaa.";
-                }
-                sw.WriteLine(line);
-            }
-            sw.Close();
+            // Displays "ExampleMethod in InnerNamespace."
+            ExampleInner inner = new ExampleInner();
+            inner.ExampleMethod();
         }
-
     }
 }
