@@ -32,7 +32,7 @@ namespace Exercise
             {
                 return this.abbreviations[abbreviation];
             }
-            return "Not found!";
+            return "not found";
         }
     }
 }
